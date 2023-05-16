@@ -1,4 +1,6 @@
 FROM node:16.20-alpine3.16
+WORKDIR /code
+COPY . /code
 RUN npm i -g @ionic/cli
-RUN ionic start newApp blank --type=angular --capacitor --no-interactive
-WORKDIR /newApp
+#docker-compose run -d web ionic start my_app tabs --type=angular --no-interactive --no-confirmation
+
