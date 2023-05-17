@@ -5,9 +5,15 @@ note: the app name have to be changed in the docker-compose.yml if you don´t ha
 1. docker engine/docker desktop
 2. docker compose
 
-# steps
+# create a new app:
 1. docker compose build
-2. docker compose run web ionic start my_app blank --type=angular --no-interactive --no-confirmation
+2. open the .env file and put a custom name for you´r app(put the same custom name in <app_name> of step 3)
+3. docker compose run web ionic start <app_name> <template> --type=<javaScript_framework> --no-interactive --no-confirmation
+4. docker compose up
+
+# use a created app:
+1. docker compose build
+2. replace the name of your app in the .env file(app_name=yourAppName)
 3. docker compose up
 
 # ionic info in container
